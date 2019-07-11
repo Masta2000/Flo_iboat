@@ -1,66 +1,90 @@
 <!DOCTYPE HTML>
 
 	<head>
-		<title>SELECTID</title>
+    <title>SELECTID </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+
 	<body class="is-preload">
-
+		<div class="startingLayout">
+			<button>ENTER</button>
+    </div>
+    
 		<!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Selectid </a>
-
-			</header>
+		<header id="header">
+      <a class="logo" href="index.html">Selectid</a>
+      <img src="images/Logo.png" alt="logo"/>
+		</header>
 
 		<!-- Banner -->
-			<section id="banner">
-				<video autoplay loop playsinline muted src="images/flo.mp4"></video>
-      </section>
+		<section id="banner">
+      <video id="video" source src="image/flo.mp4" type="video/mp4" autoplay loop playsinline></video>
+    </section>
+
+    <!--Images-->
+    <section id="gallery">
+      <img src="images/Floimage1.png" alt="Photo1">
+      <img src="images/Floimage2.png" alt="Photo2">
+      <img src="images/Floimage3.png" alt="Photo3">
+    </section>
       
 		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="content">
-						<section>
-							<h3>Contact</h3>
-							<p>Pour plus d'informations et pour répondre à vos questions: 06.71.72.92.61</p>
-						</section>
-						<section>
-							<h4>Couvre tout type d'évènements</h4>
-							<ul class="alt">
-								<li><p>Evènements privés</p></li>
-                <li><p>Evènements professionnels</p></li>
-                <li><p>Galas</p></li>
-							</ul>
-						</section>
-						<section>
-							<h4>Réseaux sociaux</h4>
-							<ul class="plain">
-								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-								<li><a href="https://www.facebook.com/selectidevenement/"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-							</ul>
-						</section>
-					</div>
-					<div class="copyright">
-						</a>Made by Masta</a>.
-					</div>
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>Contact</h3>
+						<p>Pour plus d'informations et pour répondre à vos questions: 06.71.72.92.61</p>
+					</section>
+					<section>
+						<h4>Couvre tout type d'évènements</h4>
+						<ul class="alt">
+							<li><p>Evènements privés</p></li>
+			                <li><p>Evènements professionnels</p></li>
+			                <li><p>Galas</p></li>
+						</ul>
+					</section>
+					<section>
+						<h4>Réseaux sociaux</h4>
+						<ul class="plain">
+							<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+							<li><a href="https://www.facebook.com/selectidevenement/"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+							<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+						</ul>
+					</section>
 				</div>
-			</footer>
+				<div class="copyright">
+					</a>Made by Masta</a>.
+				</div>
+			</div>
+		</footer>
 
-    <!-- Scripts -->
-    <script type="text/javascript">
-      var video = function() {(window.onload) ( _ => { setTimeout( _ => document.querySelector('video').play(), 100);})}
-    </script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	    <!-- Scripts -->
+	    <script type="text/javascript">
+
+	    	let btn = document.querySelector('.startingLayout > button');
+	    	btn.addEventListener('click', _ => start());
+
+	    	let start = _ => {
+	    		btn.parentElement.style.display = 'none';
+	    		let body = document.querySelector('body')
+	    		body.style.overflow = 'auto';
+				let video = document.querySelector('#video');
+				video.src = 'images/flo.mp4';
+				video.play();
+	    	}
+	      	
+	    </script>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
