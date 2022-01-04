@@ -24,6 +24,8 @@ body {
 
 			.startingLayout {
 				position: absolute;
+        display: flex;
+        flex-direction: row;
 				width: 100vw;
 				height: 100vh;
 				display: flex;
@@ -1053,12 +1055,25 @@ body {
   width: 400px;
   height: 300px;
   margin: 30px;
-  border-radius: 31px;
 }
 
 #gallery img:hover {
   transform: scale(1.1);
-  transition: transform .3s;
+  transition: transform .5s;
+}
+
+#title {
+  margin-top: 30px;
+  margin-left: 10px;
+  color: #2f8ec2;
+}
+
+#access {
+  display: flex;
+}
+
+#enter {
+  margin-left: 10px;
 }
 
   @media screen and (max-width: 375px) {
@@ -1066,5 +1081,15 @@ body {
       display: block;
       width: 250px;
       height: 200px;
+    }
+
+    #title {
+      font-size: 0.7em;
+    }
+  }
+
+  @media screen and (max-width: 374px) {
+    #title {
+      font-size: 0.6em;
     }
   }
